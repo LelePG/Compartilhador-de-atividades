@@ -1,11 +1,11 @@
 <template>
-  <v-card :class = "`${nome}-atividades`">
+  <v-card :class = "`${nome}-atividades atividades`">
     <h1>{{ nome }}</h1>
-    <input type="radio" id="estudando" name="estado" value="estudando" />
-    <label for="estudando">Estudando</label><br />
+    <v-radio-group row>
+      <v-radio label="Estudando" name = "estudando" color ="#990100"></v-radio>
     <slot></slot>
-    <input type="radio" id="livre" name="estado" value="livre" />
-    <label for="livre">Livre</label>
+      <v-radio label="Livre" name = "livre" color="#990100"></v-radio>
+    </v-radio-group>
   </v-card>
 </template>
 
@@ -25,4 +25,13 @@ export default {
 </script>
 
 <style>
+.atividades{
+  padding: 10px 25px;
+  height: 120px;
+}
+
+input[type="radio"]{
+  font-size:15px;
+  margin: auto;
+}
 </style>

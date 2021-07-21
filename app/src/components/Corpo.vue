@@ -6,9 +6,17 @@
       </v-col>
       <v-col>
     <Atividades>
-      <input type="radio" id="trabalhando" name="estado" value="trabalhando" />
-    <label for="trabalhando">Trabalhando</label><br />
+           <v-radio label="Trabalhando" name = "trabalhando" color= "#990100"></v-radio>
     </Atividades> 
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col>
+        <Status/>
+      </v-col>
+      <v-col>
+        <Status/>
       </v-col>
     </v-row>
 </v-card>
@@ -16,15 +24,17 @@
 
 <script>
 import Atividades from './Atividades.vue'
+import Status from './Status.vue'
 export default {
     components:{
-      Atividades
+      Atividades,
+      Status
     }
 }
 </script>
 
 <style>
 #corpo{
-  padding: 10px 8px;
+  padding: 15px 8px;
 }
 </style>
