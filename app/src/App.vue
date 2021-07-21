@@ -1,32 +1,22 @@
 <template>
-  <div id="app">
+  <div>
     <Cabecalho/>
-    <br/>
-    <Corpo/>
   </div>
+    
 </template>
 
 <script>
-import Cabecalho from './components/Cabecalho.vue'
-import Corpo from './components/Corpo.vue'
+import Cabecalho from './components/Cabecalho.vue';
 
 export default {
   name: 'App',
+
   components: {
     Cabecalho,
-    Corpo
-  }
-}
+  },
+
+  data: () => ({
+    //
+  }),
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-}
-
-
-
-</style>
