@@ -20,7 +20,7 @@ export default {
 #cabecalho {
   color: #f6f6f6;
   margin:auto;
-  padding:20px;
+  padding-top: 5px;
   text-align: center;
 }
 
