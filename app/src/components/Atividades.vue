@@ -13,15 +13,15 @@
 export default {
   data: function () {
     return {
-      nome: "teste",
     };
   },
-  methods: {
-    setNome: function (nome) {
-      this.nome = nome;
-    },
-  },
-};
+  props:{
+    nome:{
+      type: String,
+      required: true
+    }
+  }
+    };
 </script>
 
 <style>

@@ -2,10 +2,10 @@
 <v-card id = "corpo" color="#333333">
     <v-row>
       <v-col>
-    <Atividades/>
+    <Atividades nome = "Felipe"/>
       </v-col>
       <v-col>
-    <Atividades>
+    <Atividades nome = "Letícia">
            <v-radio label="Trabalhando" name = "trabalhando" color= "#990100"></v-radio>
     </Atividades> 
       </v-col>
