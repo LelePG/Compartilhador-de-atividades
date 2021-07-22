@@ -5,8 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state:{
-        estadoLeticia: "Livre",
-        estadoFelipe : "Trabalhando"
+        estadoLeticia: "livre",
+        estadoFelipe : "trabalhando"
     },
     getters: {
         getLeticia (state){

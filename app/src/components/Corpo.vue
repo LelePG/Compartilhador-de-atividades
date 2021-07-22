@@ -13,10 +13,10 @@
 
     <v-row>
       <v-col >
-        <Status/>
+        <Status nome ="Felipe"/>
       </v-col>
       <v-col>
-        <Status/>
+        <Status nome = "Letícia"/>
       </v-col>
     </v-row>
 </v-card>
