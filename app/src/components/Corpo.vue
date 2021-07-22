@@ -12,7 +12,7 @@
     </v-row>
 
     <v-row>
-      <v-col>
+      <v-col >
         <Status/>
       </v-col>
       <v-col>
@@ -25,10 +25,11 @@
 <script>
 import Atividades from './Atividades.vue'
 import Status from './Status.vue'
+
 export default {
     components:{
       Atividades,
-      Status
+      Status,
     }
 }
 </script>
