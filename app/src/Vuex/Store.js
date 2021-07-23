@@ -15,6 +15,15 @@ export default new Vuex.Store({
         getFelipe (state){
             return state.estadoFelipe
         }
+    },
+    mutations:{
+        mudaEstadoLeticia(state, cor){
+            state.estadoLeticia = cor
+        },
+        mudaEstadoFelipe (state, cor){
+            state.estadoFelipe = cor
+        }
+
     }
 
 

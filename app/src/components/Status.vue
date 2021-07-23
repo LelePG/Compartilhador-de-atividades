@@ -6,13 +6,8 @@
 
 <script>
 import {mapGetters} from 'vuex'
+
 export default {
-    props: {
-    nome: {
-      type: String,
-      required: true,
-    },
-    },
    computed:{
      ...mapGetters([
        'getLeticia',
@@ -24,17 +19,18 @@ export default {
         console.log(this.getFelipe)
       },
       getStatus(){
-          let estado
-          if (this.nome=="Letícia"){
-              estado= this.getLeticia
-          }
-          else if (this.nome == "Felipe"){
-              estado= this.getFelipe
-          }
-          console.log(estado)
-          return estado
+        //   let estado
+        //   if (this.nome=="Letícia"){
+        //       estado= this.getLeticia
+        //   }
+        //   else if (this.nome == "Felipe"){
+        //       estado= this.getFelipe
+        //   }
+        //   console.log(estado)
+        //   return estado
       }
-    }
+    },
+   
 }
 </script>
 
