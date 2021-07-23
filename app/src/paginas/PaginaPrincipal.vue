@@ -1,5 +1,5 @@
 <template>
-  <v-card id="corpo" color="#333333">
+  <div id = "corpo">
     <v-row>
       <v-col>
         <Status nome="Letícia" />
@@ -11,7 +11,7 @@
       </v-col>
     </v-row>
     <router-link to= "/modificarfelipe">AAA</router-link>
-  </v-card>
+  </div>
 </template>
 
 <script>

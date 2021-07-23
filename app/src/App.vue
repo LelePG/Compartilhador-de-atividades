@@ -2,9 +2,9 @@
   <div>
     <Cabecalho/>
     <br/>
-    <PaginaPrincipal/>
-        <router-view/>
-
+    <v-card color="#333333">
+    <router-view/>
+  </v-card>
     
   </div>
     
@@ -12,16 +12,11 @@
 
 <script>
 import Cabecalho from './components/Cabecalho.vue';
-import PaginaPrincipal from './paginas/PaginaPrincipal.vue'
+
 export default {
   name: 'App',
   components: {
     Cabecalho,
-    PaginaPrincipal,
-  },
-
-  data: () => ({
-    //
-  }),
+  }
 };
 </script>
