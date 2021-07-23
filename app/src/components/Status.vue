@@ -1,22 +1,27 @@
 <template>
-    <v-card :class= getStatus() min-height = "90px">
+    <v-card @click= teste min-height = "90px">
         <h1>Insira o texto de teste aqui</h1>
     </v-card>
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
+// import {mapGetters} from 'vuex'
 
 export default {
-   computed:{
-     ...mapGetters([
-       'getLeticia',
-       'getFelipe'])
-   },
+      props: {
+    nome: {
+      type: String,
+      required: true,
+    },
+    },
+//    computed:{
+//      ...mapGetters([
+//        'getEstado'])
+//    },
     methods:{
       teste: function(){
-        console.log(this.getLeticia)
-        console.log(this.getFelipe)
+        console.log(this.$store.getters.getEstado)
+       // console.log(this.getFelipe)
       },
       getStatus(){
         //   let estado

@@ -1,36 +1,30 @@
 <template>
-<div>
-    <Atividades :nome = "nome" >
-        <slot></slot>
+  <div>
+    <Atividades :nome="nome">
+      <slot></slot>
     </Atividades>
-    <br>
-     <Status :nome = "nome"/>
-</div>
+    <br />
+    <Status :nome="nome" />
+  </div>
 </template>
 
 <script>
-import Atividades from './Atividades.vue'
-import Status from './Status.vue'
+import Atividades from "./Atividades.vue";
+import Status from "./Status.vue";
 
 export default {
-     props: {
+  props: {
     nome: {
       type: String,
       required: true,
     },
-    },
-    components:{
-      Atividades,
-      Status,
-    },
-    methods:{
-        getNome(){
-            return this.props.nome
-        }
-    }
-}
+  },
+  components: {
+    Atividades,
+    Status,
+  },
+};
 </script>
 
 <style>
-
 </style>
