@@ -1,6 +1,6 @@
 <template>
   <v-banner id= "cabecalho" color="#333333"
-  height = "100px">
+  height = "120px">
     <h1>Informador de status</h1>
     <br/>
     <p>Porque o sistema de notificação do Felipe é falho.</p>
@@ -20,8 +20,9 @@ export default {
 #cabecalho {
   color: #f6f6f6;
   margin:auto;
-  padding-top: 5px;
+  padding-top: 25px ;
   text-align: center;
 }
+
 
 </style>
