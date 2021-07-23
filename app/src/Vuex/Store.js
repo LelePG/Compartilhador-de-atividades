@@ -24,7 +24,7 @@ export default new Vuex.Store({
                 return state.felipe.estado
             }
         },
-        getAll(state){
+        getPessoa(state){
             return state.modificar
         }
     },
