@@ -10,6 +10,7 @@
         <v-btn color="#F6F6F6" plain block>Alterar</v-btn>
       </v-col>
     </v-row>
+    <router-link to= "/modificarfelipe">AAA</router-link>
   </v-card>
 </template>
 

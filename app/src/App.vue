@@ -3,6 +3,8 @@
     <Cabecalho/>
     <br/>
     <PaginaPrincipal/>
+        <router-view/>
+
     
   </div>
     
@@ -15,7 +17,7 @@ export default {
   name: 'App',
   components: {
     Cabecalho,
-    PaginaPrincipal
+    PaginaPrincipal,
   },
 
   data: () => ({
