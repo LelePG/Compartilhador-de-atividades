@@ -2,7 +2,7 @@
   <div>
     <Cabecalho/>
     <br/>
-    <Corpo/>
+    <PaginaPrincipal/>
     
   </div>
     
@@ -10,12 +10,12 @@
 
 <script>
 import Cabecalho from './components/Cabecalho.vue';
-import Corpo from './components/Corpo.vue'
+import PaginaPrincipal from './paginas/PaginaPrincipal.vue'
 export default {
   name: 'App',
   components: {
     Cabecalho,
-    Corpo
+    PaginaPrincipal
   },
 
   data: () => ({

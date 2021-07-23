@@ -1,6 +1,6 @@
 <template>
   <v-card :class="this.estado" min-height="90px">
-    <h1>Insira o texto de teste aqui</h1>
+    <h2>{{texto}}</h2>
   </v-card>
 </template>
 
@@ -9,6 +9,11 @@ import { mapGetters } from "vuex";
 import { mapMutations } from "vuex";
 
 export default {
+  data: function(){
+    return{
+      texto : `${this.nome} ainda não inciou as atividades.`
+    }
+  },
   props: {
     nome: {
       type: String,
@@ -37,5 +42,8 @@ export default {
 }
 .trabalhando {
   background-color: blue !important;
+}
+h2{
+  text-align: center;
 }
 </style>

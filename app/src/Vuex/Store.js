@@ -7,11 +7,11 @@ export default new Vuex.Store({
     state:{
         leticia:{
             nome: "Letícia",
-            estado: "livre"
+            estado: ""
         },
         felipe:{
             nome: "Felipe",
-            estado: "estudando"
+            estado: ""
         },
         modificar: ""
     },
