@@ -1,52 +1,41 @@
 <template>
-    <v-card @click= teste min-height = "90px">
-        <h1>Insira o texto de teste aqui</h1>
-    </v-card>
+  <v-card :class="this.estado" min-height="90px">
+    <h1>Insira o texto de teste aqui</h1>
+  </v-card>
 </template>
 
 <script>
-// import {mapGetters} from 'vuex'
+import { mapGetters } from "vuex";
+import { mapMutations } from "vuex";
 
 export default {
-      props: {
+  props: {
     nome: {
       type: String,
       required: true,
     },
+  },
+  computed: {
+    ...mapGetters(["getEstado", "getAll"]),
+    estado: function () {
+      this.$store.commit("selecionarPessoa", this.nome);
+      return this.getEstado;
     },
-//    computed:{
-//      ...mapGetters([
-//        'getEstado'])
-//    },
-    methods:{
-      teste: function(){
-        console.log(this.$store.getters.getEstado)
-       // console.log(this.getFelipe)
-      },
-      getStatus(){
-        //   let estado
-        //   if (this.nome=="Letícia"){
-        //       estado= this.getLeticia
-        //   }
-        //   else if (this.nome == "Felipe"){
-        //       estado= this.getFelipe
-        //   }
-        //   console.log(estado)
-        //   return estado
-      }
-    },
-   
-}
+  },
+  methods: {
+    ...mapMutations(["selecionarPessoa"]),
+  },
+};
 </script>
 
 <style>
-.livre{
-    background-color: green !important;
+.livre {
+  background-color: green !important;
 }
-.estudando{
-    background-color: deeppink !important;
+.estudando {
+  background-color: deeppink !important;
 }
-.trabalhando{
-    background-color: blue !important;
+.trabalhando {
+  background-color: blue !important;
 }
 </style>

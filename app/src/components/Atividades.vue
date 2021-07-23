@@ -34,8 +34,8 @@ export default {
   methods: {
     ...mapMutations(["selecionarPessoa", "mudaEstado"]),
     trocaEstado() {
-      this.selecionarPessoa(this.nome);
-      this.mudaEstado(this.corAtual);
+      this.$store.commit('selecionarPessoa',this.nome);
+      this.$store.commit('mudaEstado',this.corAtual);
     },
   },
 };

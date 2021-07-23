@@ -15,26 +15,29 @@ export default new Vuex.Store({
         },
         modificar: ""
     },
-    methods: {
+    getters: {
         getEstado(state){
-            if (this.modificar == "Letícia"){
-                return state.estadoLeticia
+            if (state.modificar == "Letícia"){
+                return state.leticia.estado
             }
-            else if (this.modificar == "Felipe"){
-                return state.estadoFelipe
+            else if (state.modificar == "Felipe"){
+                return state.felipe.estado
             }
+        },
+        getAll(state){
+            return state.modificar
         }
     },
     mutations:{
         selecionarPessoa(state, nome){
-            this.modificar = nome// esse é um atributo que eu quero modificar globalmente, por isso o this.
+            state.modificar = nome
         },
         mudaEstado(state, cor){
-            if (this.modificar == "Letícia"){
-               state.estadoLeticia =cor
+            if (state.modificar == "Letícia"){
+               state.leticia.estado =cor
             }
-            else if (this.modificar == "Felipe"){
-               state.estadoFelipe =cor
+            else if (state.modificar == "Felipe"){
+               state.felipe.estado=cor
             }
         },
         mudaEstadoLeticia(state, cor){
