@@ -1,6 +1,7 @@
 <template>
   <v-card :class="this.estado()" min-height="90px">
     <h2>{{texto}}</h2>
+    <p id = "textoEstado">{{this.getEstado}}</p>
   </v-card>
 </template>
 
@@ -35,16 +36,23 @@ export default {
 </script>
 
 <style>
-.livre {
-  background-color: green !important;
+.livre{
+ background-color: #FF5C5C !important;
+  color: #F6F6F6 !important; 
 }
 .estudando {
-  background-color: deeppink !important;
+ background-color: #666666 !important;
+  color: #F6F6F6 !important; 
 }
 .trabalhando {
-  background-color: blue !important;
+  background-color: #B90504 !important;
+  color: #F6F6F6 !important; 
 }
 h2{
+  text-align: center;
+}
+p#textoEstado{
+  margin-top:30px;
   text-align: center;
 }
 </style>
