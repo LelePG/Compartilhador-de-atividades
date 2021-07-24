@@ -3,14 +3,13 @@
     <v-row>
       <v-col>
         <Status nome="Letícia" />
-        <v-btn color="#F6F6F6" block plain>Alterar</v-btn>
+        <router-link to= "/modificarleticia"><v-btn color="#F6F6F6" block plain>Alterar</v-btn></router-link>
       </v-col>
       <v-col>
         <Status nome="Felipe" />
-        <v-btn color="#F6F6F6" plain block>Alterar</v-btn>
+        <router-link to= "/modificarfelipe"><v-btn color="#F6F6F6" block plain>Alterar</v-btn></router-link>
       </v-col>
     </v-row>
-    <router-link to= "/modificarfelipe">AAA</router-link>
   </div>
 </template>
 

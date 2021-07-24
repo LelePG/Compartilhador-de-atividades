@@ -13,7 +13,7 @@ export default new Router({
     //Caminho da url que vai acessar o componente e o componente que vai ser acessado 
     { path: '/', component: PaginaPrincipal },
     { path: '/modificarfelipe', component: ModificarFelipe },
-    { path: '/modificarletica', component: ModificarLeticia },
+    { path: '/modificarleticia', component: ModificarLeticia },
   ]
 })
 
