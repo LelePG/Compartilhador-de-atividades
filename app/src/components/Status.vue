@@ -1,5 +1,5 @@
 <template>
-  <v-card :class="this.estado" min-height="90px">
+  <v-card :class="this.estado()" min-height="90px">
     <h2>{{texto}}</h2>
   </v-card>
 </template>
@@ -21,14 +21,15 @@ export default {
     },
   },
   computed: {
-    ...mapGetters(["getEstado", "getAll"]),
-    estado: function () {
-      this.$store.commit("selecionarPessoa", this.nome);
-      return this.getEstado;
-    },
+    ...mapGetters(["getEstado", "getTextoStatus"]),
   },
   methods: {
     ...mapMutations(["selecionarPessoa"]),
+    estado() {
+      this.$store.commit("selecionarPessoa", this.nome);
+      this.texto = this.getTextoStatus
+      return this.getEstado
+    },
   },
 };
 </script>
