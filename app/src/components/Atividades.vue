@@ -28,6 +28,8 @@
       rounded
       dense
       v-model="textoStatus"
+      counter
+      maxlength="35"
     ></v-text-field>
     <v-card-actions class="ma-0 pa-0">
       <router-link to="/"
