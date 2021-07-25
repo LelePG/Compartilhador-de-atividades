@@ -36,8 +36,9 @@ export default {
 </script>
 
 <style>
-.livre{
- background-color: #FF5C5C !important;
+
+.reuniao{
+  background-color: #8F8F8F !important;
   color: #F6F6F6 !important; 
 }
 .estudando {
@@ -46,6 +47,10 @@ export default {
 }
 .trabalhando {
   background-color: #B90504 !important;
+  color: #F6F6F6 !important; 
+}
+.livre{
+ background-color: #FF5C5C !important;
   color: #F6F6F6 !important; 
 }
 h2{

@@ -8,6 +8,12 @@
         color="#990100"
         value="estudando"
       ></v-radio>
+      <v-radio
+        label="Em reunião"
+        name="reuniao"
+        color="#990100"
+        value="reuniao"
+      ></v-radio>
       <slot></slot>
       <v-radio
         label="Livre"
