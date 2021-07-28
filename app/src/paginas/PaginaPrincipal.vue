@@ -7,7 +7,7 @@
       </v-col>
       <v-col>
         <Status nome="Felipe" />
-        <router-link to= "/modificarfelipe"><v-btn color="#F6F6F6" block plain>Alterar</v-btn></router-link>
+        <router-link to= "/modificarfelipe"><v-btn color="#F6F6F6" @click = "requisita" block plain>Alterar</v-btn></router-link>
       </v-col>
     </v-row>
   </div>
@@ -19,6 +19,11 @@ export default {
   components: {
     Status,
   },
+  methods:{
+    requisita: function(){
+      fetch("http://localhost:8081/teste").then(()=>console.log("VORTEI"))
+    }
+  }
 };
 </script>
 
