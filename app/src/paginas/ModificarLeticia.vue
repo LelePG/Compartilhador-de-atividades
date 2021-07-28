@@ -1,7 +1,7 @@
 <template>
 <div id="mostraAtividades">
     <v-col>
-    <Atividades nome="Letícia">
+    <Atividades nome="Leticia">
       <v-radio
         label="Trabalhando"
         name="trabalhando"

@@ -1,7 +1,7 @@
 <template>
-  <v-card :class="this.estado()" min-height="90px">
+  <v-card :class="estado" @click = "debug" min-height="90px">
     <h2>{{texto}}</h2>
-    <p id = "textoEstado">{{this.getEstado}}</p>
+    <p id = "textoEstado">{{estado}}</p>
   </v-card>
 </template>
 
@@ -10,11 +10,6 @@ import { mapGetters } from "vuex";
 import { mapMutations } from "vuex";
 
 export default {
-  data: function(){
-    return{
-      texto : `${this.nome} ainda não inciou as atividades.`
-    }
-  },
   props: {
     nome: {
       type: String,
@@ -26,11 +21,15 @@ export default {
   },
   methods: {
     ...mapMutations(["selecionarPessoa"]),
-    estado() {
-      this.$store.commit("selecionarPessoa", this.nome);
-      this.texto = this.getTextoStatus
-      return this.getEstado
-    },
+   debug(){
+     //console.log("status" +this.nome,this.estado,this.texto)
+   }
+  //console.log(resposta)
+      //.then(respostaFormatada => console.log(respostaFormatada))
+      // this.$store.commit("selecionarPessoa", this.nome);
+      // this.texto = this.getTextoStatus
+      // return this.getEstado
+  
   },
 };
 </script>
