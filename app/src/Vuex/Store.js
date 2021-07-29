@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state:{
+        atualizar: true,
         leticia:{
             nome: "Letícia",
             estado: "",
@@ -18,6 +19,9 @@ export default new Vuex.Store({
         modificar: ""
     },
     getters: {
+        getAtualizar(state){
+            return state.atualizar
+        },
         getEstado(state){
             if (state.modificar == "Letícia"){
                 return state.leticia.estado
@@ -40,6 +44,9 @@ export default new Vuex.Store({
         }
     },
     mutations:{
+        mudaAtualizar(state,status){
+            state.atualizar = status
+        },
         selecionarPessoa(state, nome){
             state.modificar = nome
         },

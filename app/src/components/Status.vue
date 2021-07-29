@@ -1,26 +1,47 @@
 <template>
-  <v-card :class="estado" @click = "debug" min-height="90px">
+  <v-card :class="estado" min-height="90px">
     <h2>{{texto}}</h2>
     <p id = "textoEstado">{{estado}}</p>
   </v-card>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import { mapMutations } from "vuex";
-
+import {mapGetters} from 'vuex'
+//import {mapMutaions} from 'vuex'
 export default {
+  data:function(){
+    return {
+    estado: "",
+    texto: `${this.nome} ainda não iniciou as atividades.`
+    }
+  },
+  created:function(){
+     fetch(`http://192.168.0.108:8081/${this.nome}Status`)
+      .then(res=>res.json())
+      .then(obj => {
+        //console.log(obj)
+        this.texto = obj.texto
+        this.estado = obj.estado
+      })
+  },
+  computed:{
+    ...mapGetters['getAtualizar']
+  },
   props: {
     nome: {
       type: String,
       required: true,
     },
   },
-  computed: {
-    ...mapGetters(["getEstado", "getTextoStatus"]),
-  },
   methods: {
-    ...mapMutations(["selecionarPessoa"]),
+    atualizaStatus() {
+      fetch(`http://192.168.0.108:8081/${this.nome}Status`)
+      .then(res=>res.json())
+      .then(obj => {
+        //console.log(obj)
+        this.texto = obj.texto
+        this.estado = obj.estado
+      })},
    debug(){
      //console.log("status" +this.nome,this.estado,this.texto)
    }

@@ -1,13 +1,13 @@
 <template>
-  <div id = "corpo" @click = "debug">
+  <div id = "corpo">
     <v-row>
       <v-col>
-        <Status :nome= "leticia.nome" :estado = "leticia.estado" :texto = "leticia.texto" />
-        <router-link to= "/modificarleticia"><v-btn @click = "atualizaStatusLeticia()"  color="#F6F6F6" block plain>Alterar</v-btn></router-link>
+        <Status nome= "Leticia"  />
+        <router-link to= "/modificarleticia"><v-btn color="#F6F6F6" block plain>Alterar</v-btn></router-link>
       </v-col>
       <v-col>
-        <Status :nome = felipe.nome :estado = felipe.estado :texto = felipe.texto />
-        <router-link to= "/modificarfelipe"><v-btn color="#F6F6F6" @click = 'atualizaStatusFelipe()' block plain>Alterar</v-btn></router-link>
+        <Status nome = "Felipe" />
+        <router-link to= "/modificarfelipe"><v-btn color="#F6F6F6" block plain>Alterar</v-btn></router-link>
       </v-col>
     </v-row>
   </div>
@@ -18,16 +18,16 @@ import Status from "../components/Status.vue";
 export default {
   data: function(){
     return {
-      // leticia:{
-      //   nome: "Leticia",
-      //       estado: "",
-      //       texto:"Letícia ainda não iniciou as atividades.",
-      //   },
-      //   felipe:{
-      //     nome:"Felipe",
-      //       estado: "",
-      //       texto:"Felipe ainda não iniciou as atividades.",
-      //   },
+      leticia:{
+        nome: "Leticia",
+            estado: "",
+            texto:"Letícia ainda não iniciou as atividades.",
+        },
+        felipe:{
+          nome:"Felipe",
+            estado: "",
+            texto:"Felipe ainda não iniciou as atividades.",
+        },
     }
   },
   components: {

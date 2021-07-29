@@ -1,17 +1,19 @@
 var express = require('express')
 var cors = require('cors')
 var app = express()
+var reload = require('reload')
+
 
 app.use(cors())
 
 const estados = {
         leticia:{
-            estado: "trabalhando",
-            texto:"AAAAALetícia ainda não iniciou as atividades.",
+            estado: "",
+            texto:"Letícia ainda não iniciou as atividades.",
         },
         felipe:{
-            estado: "livre",
-            texto:"BBBBcccccFelipe ainda não iniciou as atividades.",
+            estado: "",
+            texto:"Felipe ainda não iniciou as atividades.",
         },
     }
     // getters: {
@@ -63,7 +65,12 @@ const estados = {
 
     //}
 
-
+const alteraEstado =function(pessoa,URLparam){
+    let parametros = URLparam.parametro.split("&")
+    pessoa.estado = parametros[0]
+    pessoa.texto = parametros[1]
+    console.log(parametros)
+}
 app.get('/teste', function (req, res, next) {
     console.log("ouviiii")
     res.json({"a":"FUNFEI"})
@@ -72,7 +79,25 @@ app.get('/teste', function (req, res, next) {
 app.get("/LeticiaStatus", (req,res)=>res.json(estados.leticia))
 app.get("/FelipeStatus", (req,res)=>res.json(estados.felipe))
 
-
-app.listen(8081, function () {
-  console.log('CORS-enabled web server listening on port 80')
+app.get("/Felipe/:parametro",(req,res)=> {
+    alteraEstado(estados.felipe,req.params)
+    res.send("ok")
 })
+app.get("/Leticia/:parametro",(req,res)=> {alteraEstado(estados.leticia,req.params)
+res.send("ok")
+})
+
+
+reload(app).then(function (reloadReturned) {
+    // reloadReturned is documented in the returns API in the README
+  
+    // Reload started, start web server
+    app.listen(8081, function () {
+      console.log('Web server listening on port 8081' )
+    })
+  }).catch(function (err) {
+    console.error('Reload could not start, could not start server/sample app', err)
+  })
+// app.listen(8081, function () {
+//   console.log('CORS-enabled web server listening on port 80')
+// })
