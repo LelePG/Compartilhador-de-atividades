@@ -45,7 +45,6 @@
 </template>
 
 <script>
-import { mapMutations } from "vuex";
 export default {
   data: function () {
     return { corAtual: "", textoStatus: "" };
@@ -57,21 +56,15 @@ export default {
     },
   },
   methods: {
-    ...mapMutations(["selecionarPessoa", "mudaEstado", "alteraFraseStatus"]),
     salvarAlteracoes() {
       if (this.corAtual) {
-         fetch(`http://192.168.0.108:8081/${this.nome}/${this.corAtual}&${this.textoStatus}`)
-      // .then(res=>res.json())
-      // .then(obj => {
-      //   //console.log(obj)
-      //   this.texto = obj.texto
-      //   this.estado = obj.estado
-      //})
-        // this.$store.commit("selecionarPessoa", this.nome);
-        // this.$store.commit("mudaEstado", this.corAtual);
-        // this.$store.commit("alteraFraseStatus", this.textoStatus);
-      }else{
-        window.alert("Não foi possível atualizar porque você não selecionou o status.")
+        fetch(
+          `http://192.168.0.108:8081/${this.nome}/${this.corAtual}&${this.textoStatus}`
+        );
+      } else {
+        window.alert(
+          "Não foi possível atualizar porque você não selecionou o status."
+        );
       }
     },
   },
