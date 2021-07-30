@@ -9,6 +9,7 @@ import PaginaPrincipal from "./paginas/PaginaPrincipal"
 Vue.use(Router)
 
 export default new Router({
+  mode:"history",
   routes: [
     //Caminho da url que vai acessar o componente e o componente que vai ser acessado 
     { path: '/', component: PaginaPrincipal },
