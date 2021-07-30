@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import IP from "../ip.js"
+import IP from "../router/ip.js"
 export default {
   data: function () {
     return {

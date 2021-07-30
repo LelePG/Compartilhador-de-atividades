@@ -2,9 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 //Componentes que vão se renderizados e seus caminhos
-import ModificarFelipe from "./paginas/ModificarFelipe"
-import ModificarLeticia from "./paginas/ModificarLeticia"
-import PaginaPrincipal from "./paginas/PaginaPrincipal"
+import ModificarFelipe from "../paginas/ModificarFelipe"
+import ModificarLeticia from "../paginas/ModificarLeticia"
+import PaginaPrincipal from "../paginas/PaginaPrincipal"
 
 Vue.use(Router)
 
