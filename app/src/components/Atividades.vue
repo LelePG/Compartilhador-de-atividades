@@ -57,14 +57,14 @@ export default {
   },
   methods: {
     salvarAlteracoes() {
-      if (this.corAtual) {
+      if (this.corAtual && this.textoStatus) {
         fetch(
           `http://192.168.0.108:8081/${this.nome}/${this.corAtual}&${this.textoStatus}`
         );
+      } else if (!this.corAtual) {
+        window.alert("Não foi possível atualizar porque você não selecionou o status.");
       } else {
-        window.alert(
-          "Não foi possível atualizar porque você não selecionou o status."
-        );
+        window.alert("Não foi possível atualizar porque você não inseriu o texto.");
       }
     },
   },
