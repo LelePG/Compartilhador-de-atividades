@@ -19,6 +19,10 @@ Antes de rodar a aplicação, você precisa fazer uma alteração no arquivo **i
 
 O servidor que armazena as informações começará a rodar na porta 8081, enquanto o servidor do front-end rodará na porta 8080, e para acessar a aplicação na sua máquina, você pode acessar a aplicação pelo endereço **http://localhost:8080** e na rede local pelo endereço **http://SEU_IP:8080**.
 
+Uma vez acessado, você pode modificar o status de um determinado usuário clicando no botão *aletrar* abaixo do card que representa o status daquele usuário. Uma vez que tenha clicado em alterar você será redirecionado para outra tela onde pode escolher a mensagem que vai aparecer no card e o status do usuário. Após isso, basta clicar em **modificar** para que as modificações sejam persisitidas para o servidor de armazenamento de dados.
+
+A tela inicial ainda conta com um botão de recarregar que serve para recarregar a página e verificar o status do outro usuário já as alterações feitas em uma máquina não são aplicadas em tempo real para as demais máquinas conectadas.
+
 ## Quais tecnologias foram usadas no desenvolvimetno deste projeto?
 Basicamente o projeto é todo em Javascript, sendo que utiliza o framework Vue para a criação do front-end, em conjunto com Vuetify para criar os elementos gráficos, e o servidor que mantém as informações é desenvolvido em node, tendo express e cors como dependências.
 
