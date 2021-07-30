@@ -45,6 +45,7 @@
 </template>
 
 <script>
+import IP from "../ip.js"
 export default {
   data: function () {
     return { corAtual: "", textoStatus: "" };
@@ -59,7 +60,7 @@ export default {
     salvarAlteracoes() {
       if (this.corAtual && this.textoStatus) {
         fetch(
-          `http://192.168.0.108:8081/${this.nome}/${this.corAtual}&${this.textoStatus}`
+          `http://${IP.ip}:8081/${this.nome}/${this.corAtual}&${this.textoStatus}`
         );
       } else if (!this.corAtual) {
         window.alert("Não foi possível atualizar porque você não selecionou o status.");

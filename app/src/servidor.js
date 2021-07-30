@@ -1,8 +1,6 @@
 var express = require('express')
 var cors = require('cors')
 var app = express()
-var reload = require('reload')
-
 
 app.use(cors())
 
@@ -37,17 +35,6 @@ app.get("/Leticia/:parametro", (req, res) => {
     res.send("ok")
 })
 
-
-reload(app).then(function (reloadReturned) {
-    // reloadReturned is documented in the returns API in the README
-
-    // Reload started, start web server
-    app.listen(8081, function () {
-        console.log('Web server listening on port 8081')
-    })
-}).catch(function (err) {
-    console.error('Reload could not start, could not start server/sample app', err)
+app.listen(8081, function () {
+  console.log('Servidor funcionando.')
 })
-// app.listen(8081, function () {
-//   console.log('CORS-enabled web server listening on port 80')
-// })

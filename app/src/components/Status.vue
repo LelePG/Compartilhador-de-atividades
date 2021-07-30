@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import IP from "../ip.js"
 export default {
   data: function () {
     return {
@@ -14,7 +15,7 @@ export default {
     };
   },
   created: function () {
-    fetch(`http://192.168.0.108:8081/${this.nome}Status`)
+    fetch(`http://${IP.ip}:8081/${this.nome}Status`)
       .then((res) => res.json())
       .then((obj) => {
         this.texto = obj.texto;
@@ -29,7 +30,7 @@ export default {
   },
   methods: {
     atualizaStatus() {
-      fetch(`http://192.168.0.108:8081/${this.nome}Status`)
+      fetch(`http://localhost:8081/${this.nome}Status`)
         .then((res) => res.json())
         .then((obj) => {
           this.texto = obj.texto;
