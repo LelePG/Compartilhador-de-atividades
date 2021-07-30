@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "startserver": "node ./src/servidor.js",
-    "start": "(node ./src/servidor.js &) && (vue-cli-service serve)"
+    "start": "(node ./back/servidor.js &) && (vue-cli-service serve)"
   },
   "dependencies": {
     "core-js": "^3.6.5",
