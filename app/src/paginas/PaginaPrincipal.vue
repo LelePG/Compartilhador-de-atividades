@@ -1,5 +1,6 @@
 <template>
   <div id="corpo">
+    <v-btn color="#F6F6F6" @click = "refresh" block plain class>Recarregar</v-btn>
     <v-row>
       <v-col>
         <Status nome="Leticia" />
@@ -23,6 +24,11 @@ export default {
   components: {
     Status,
   },
+  methods:{
+    refresh: function(){
+        document.location.reload(true)
+    }
+  }
 };
 </script>
 
