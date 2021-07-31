@@ -6,11 +6,11 @@ app.use(cors())
 
 const estados = {
     leticia: {
-        estado: "",
+        estado: "livre",
         texto: "Letícia ainda não iniciou as atividades.",
     },
     felipe: {
-        estado: "",
+        estado: "livre",
         texto: "Felipe ainda não iniciou as atividades.",
     },
 }

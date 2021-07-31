@@ -1,5 +1,6 @@
 <template>
   <v-card :class="estado" min-height="90px">
+    <p id = "nomeUsuario">{{nome}}</p>
     <h2>{{ texto }}</h2>
     <p id="textoEstado">{{ estado }}</p>
   </v-card>
@@ -64,5 +65,10 @@ h2 {
 p#textoEstado {
   margin-top: 30px;
   text-align: center;
+}
+
+p#nomeUsuario{
+  text-align: center;
+  margin-bottom:10px;
 }
 </style>
