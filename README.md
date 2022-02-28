@@ -1,5 +1,4 @@
 # Compartilhador-de-atividades
-# PROJETO EM CONSTRUÇÃO
 <img src = "./imagens/print1.png" width = "425px;">
 
 <img src = "./imagens/print2.png" width = "440px;">
